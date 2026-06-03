@@ -1,0 +1,9 @@
+<%= link_to "#", class: "nav-link text-dark",
+            data: { action: "click->toggle#call", toggle_target: "icon" } do %>
+  <i class="fa-regular fa-square-caret-left"></i>
+<% end %>
+
+<%= link_to "#", class: "nav-link text-dark d-none",
+            data: { action: "click->toggle#call", toggle_target: "icon" } do %>
+  <i class="fa-regular fa-square-caret-right"></i>
+<% end %>

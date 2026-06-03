@@ -1,0 +1,8 @@
+<ul class="position-sticky sticky-top nav nav-pills flex-column">
+  <% challenges.each do |challenge| %>
+    <li class="nav-item">
+      <%= link_to challenge.name, challenge_path(challenge),
+        class: class_names("nav-link", "active" => challenge == current_challenge, "text-dark" => challenge != current_challenge) %>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsAiChallenges</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <%= render "shared/navbar" %>
+
+    <div class="container-fluid">
+      <div class="row" data-controller="toggle">
+        <div class="mt-2 px-4">
+          <%= render "shared/sidenav_icons" %>
+        </div>
+
+        <nav class="col-md-2 pt-1" data-toggle-target="hideable">
+          <%= render "shared/sidenav", challenges: @challenges, current_challenge: @challenge %>
+        </nav>
+
+        <div class="col-md-10 px-4">
+          <%= render "shared/flashes" %>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
