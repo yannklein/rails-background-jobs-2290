@@ -21,7 +21,7 @@ default: &default
 
 development:
   <<: *default
-  database: rails_ai_challenges_development
+  database: rails_ai_challenges_development2
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
